@@ -1,0 +1,19 @@
+name: cplayground
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch
+  - torchvision
+  - psycopg2
+  - pip
+  - pip:
+    - git+https://github.com/openai/CLIP.git
+    - ftfy
+    - regex
+    - tqdm
+    - pillow
+    - fastapi[standard]
+    - psycopg2
+
