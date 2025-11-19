@@ -1,27 +1,27 @@
 import psycopg2
-import requests
-import torch
-import clip
-import array
+import os
+from dotenv import load_dotenv
 from PIL import Image
 
 
 def create_connection():
     try:
 
+        load_dotenv()
+
         conn = psycopg2.connect(
-            host="127.0.0.1",
-            database="clip_playground",
-            user="admin",
-            password="pass",
-            port="5432" # Default is 5432
+            host=os.getenv("DB_HOST"),
+            database=os.getenv("DB_DATABASE"),
+            user=os.getenv("DB_USERNAME"),
+            password=os.getenv("DB_PASSWORD"),
+            port=os.getenv("DB_PORT") # Default is 5432
         )
-        print("Connected to Destination PostgreSQL successfully!")
+        print("####### Connected to Destination PostgreSQL successfully!")
 
         return conn
 
     except psycopg2.Error as e:
-        print(f"Error connecting to PostgreSQL: {e}")
+        print(f"######## Error connecting to PostgreSQL: {e}")
         conn = None
 
 def save_image_info(name, embedding):
