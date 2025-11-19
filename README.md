@@ -13,7 +13,8 @@ And activate it with following query statement
 
 CREATE EXTENSION IF NOT EXISTS vector;
 
-TODO: Add support for config file in order to setup db connection params, right now params are hardcoded on db.py file
+Rename or copy .env.example file to .env
+Add db connection params.
 ```
 
 ## Conda local environment for development
