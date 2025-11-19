@@ -5,4 +5,5 @@ regex
 torch
 torchvision
 tqdm
+python-dotenv
 fastapi[standard]

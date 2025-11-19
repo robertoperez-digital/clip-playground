@@ -16,4 +16,5 @@ dependencies:
     - pillow
     - fastapi[standard]
     - psycopg2
+    - python-dotenv
 
