@@ -5,6 +5,8 @@
 ### Prerequisites
 #### Local Postgresql database
 ```
+In schema folder you can find a dump db file with the needed schema.
+
 Be sure your db has the 
 
 pgvector extension
